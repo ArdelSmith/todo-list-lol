@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from 'react-query';
-import {ModalOverlay, ModalContent, Input, ModalButton, ModalP} from './styles/StyledComponents'
+import {ModalOverlay, ModalContent, ModalDeleteButton, ModalButton, ModalP} from './styles/StyledComponents'
 
 const DeleteModal = ({ onClose, todos, id, queryClient}) => {
-
-    const [newTodo, setNewTodo] = useState('');
-
 
     const saveTodos = (todos) => {
         localStorage.setItem('todos', JSON.stringify(todos));
@@ -33,7 +30,7 @@ const DeleteModal = ({ onClose, todos, id, queryClient}) => {
       <ModalOverlay>
         <ModalContent>
           <ModalP>Are you sure that you want to delete this task?</ModalP>
-          <ModalButton onClick={() => handleDeleteTodo(id)}>Delete</ModalButton>
+          <ModalDeleteButton onClick={() => handleDeleteTodo(id)}>Delete</ModalDeleteButton>
           <ModalButton onClick={onClose}>Cancel</ModalButton>
         </ModalContent>
       </ModalOverlay>

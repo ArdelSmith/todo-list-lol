@@ -69,6 +69,10 @@ export const ModalButton = styled.button`
   font-style: normal;
   font-weight: 700;
   line-height: 140%; /* 19.6px */
+  opacity: 1;
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 export const ModalP = styled.p`
@@ -85,6 +89,7 @@ export const Input = styled.input`
     max-height: 10px;
     display: flex;
     padding: 16px;
+    margin-top: 8px;
     align-items: center;
     gap: 8px;
     flex: 1 0 0;
@@ -164,6 +169,27 @@ export const DeleteButton = styled.button`
   }
 `;
 
+export const ModalDeleteButton = styled.button`
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: 0px;
+  border-radius: 8px;
+  background: var(--Red, #ff0f0f);
+  color: var(--Gray-100, #F2F2F2);
+  font-family: @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 19.6px */
+  opacity: 1;
+  &:hover {
+    opacity: 0.8;
+  }
+`;
+
 export const EditButton = styled.button`
   align-self: center;
   background: url("/edit.svg") no-repeat;
@@ -216,4 +242,36 @@ export const CountHolder = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+`;
+
+export const TaskHolder = styled.div `
+  flex-direction: row; 
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+`;
+
+export const Container = styled.div `
+flex-direction: row;
+display: flex;
+align-items: center;
+gap: 8px;
+`;
+
+export const ButtonsHolder = styled.div`
+  gap: 8px;
+  display: flex;
+  marginRight: auto;
+`;
+
+export const TasksUl = styled.ul`
+  flex-direction: column;
+  display: flex;
+  padding: 0px;
+  gap: 8px;
+  width: 70%;
+`;
+
+export const TaskUlElem = styled.ul`
+padding: 0px;
 `;

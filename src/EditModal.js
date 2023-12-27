@@ -37,9 +37,9 @@ const EditModal = ({ onClose, todos, id, queryClient}) => {
     return (
       <ModalOverlay>
         <ModalContent>
-          <ModalP>Edit task</ModalP>
+          <ModalP>Enter new title for task</ModalP>
           <Input onChange={(e) => setEditTodo(e.target.value)}></Input>
-          <ModalButton onClick={() => handleEditTodo(id)}>Add task</ModalButton>
+          <ModalButton onClick={() => handleEditTodo(id)}>Edit task</ModalButton>
           <ModalButton onClick={onClose}>Close</ModalButton>
         </ModalContent>
       </ModalOverlay>
